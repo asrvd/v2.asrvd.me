@@ -22,6 +22,10 @@ p {
   @apply text-zinc-100 text-[0.97rem] leading-relaxed tracking-normal mb-4 font-[350];
 }
 
+footer p {
+  @apply text-stone-300 text-[0.90rem] font-[450] tracking-normal !important;
+}
+
 .divider {
   @apply text-zinc-500 text-lg w-full lg:w-[55%] mt-10 mb-10;
 }

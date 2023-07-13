@@ -1,10 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import "./globals.css";
-import { Inter, Manrope } from "next/font/google";
-
-const manrope = Manrope({ subsets: ["latin"] });
-const inter = Inter({ subsets: ["latin"] });
 import NavBar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 export const metadata = {
   title: "Create Next App",
@@ -38,6 +35,7 @@ export default function RootLayout({
           <NavBar />
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );

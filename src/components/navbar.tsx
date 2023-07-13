@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+
 "use client";
 
 import { motion } from "framer-motion";
@@ -62,7 +64,7 @@ export default function NavBar() {
   }, [pathname]);
 
   return (
-    <div className="border border-stone-800/90 p-[0.4rem] rounded-lg mb-12">
+    <div className="border border-stone-800/90 p-[0.4rem] rounded-lg mb-12 sticky top-4 bg-stone-900/80 backdrop-blur-md">
       <nav className="flex gap-2 relative justify-start w-full z-10  rounded-lg">
         <motion.div
           className={`absolute top-0 w-full h-full rounded-md -z-10 bg-stone-800/80`}
