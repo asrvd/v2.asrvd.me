@@ -1,27 +1,125 @@
+@import url("https://api.fontshare.com/v2/css?f[]=satoshi@1,900,700,500,300,400&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  @apply selection:bg-zinc-500/40;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
+html,
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply scrollbar-thin scrollbar-thumb-neutral-800/90 scrollbar-track-stone-900 scrollbar-thumb-rounded-md;
+  color-scheme: dark;
+}
+
+h2 {
+  @apply text-zinc-50 font-semibold text-lg tracking-tight mb-4 leading-none;
+}
+
+p {
+  @apply text-zinc-100 text-[0.97rem] leading-relaxed tracking-normal mb-4 font-[350];
+}
+
+.divider {
+  @apply text-zinc-500 text-lg w-full lg:w-[55%] mt-10 mb-10;
+}
+
+a {
+  @apply underline underline-offset-2 cursor-pointer duration-150 text-zinc-100;
+
+  text-decoration-color: #71717a;
+  text-decoration-thickness: 1px;
+}
+
+a:hover {
+  text-decoration-color: #f4f4f5;
+}
+
+article a {
+  @apply underline underline-offset-2 cursor-pointer duration-150 text-zinc-100 !important;
+
+  text-decoration-color: #71717a !important;
+  text-decoration-thickness: 1px !important;
+}
+
+article a:hover {
+  text-decoration-color: #f4f4f5 !important;
+}
+
+article ul > li {
+  @apply text-zinc-100 text-[0.97rem] font-normal !important;
+}
+
+article pre {
+  @apply rounded-lg !important;
+}
+
+article h1,
+article h2,
+article h3,
+article h4 {
+  @apply text-zinc-50 font-semibold text-lg tracking-tight mb-4 leading-none !important;
+}
+
+article h2, h3, h4 {
+  @apply mt-8 !important;
+}
+
+article img {
+  @apply w-full rounded-lg !important;
+}
+
+mark {
+  @apply text-orange-200/90 bg-transparent;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata,
+.token.punctuation {
+  color: #71717a;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #f4f4f5;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #a5f3fc;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.regex,
+.token.important,
+.token.variable {
+  color: #a1a1aa;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #a1a1aa;
+}
+
+.token.function,
+.token.class-name {
+  color: #fed7aa;
 }

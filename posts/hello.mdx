@@ -1,0 +1,71 @@
+---
+title: 'MDX Example'
+description: 'This is an example of using MDX'
+published: 2021-05-20
+---
+
+Hello, Next.js!
+ 
+You can import and use React components in MDX files.
+
+- fwfrwf
+- rrwgwrg
+- refrwr
+
+lorem ipsum dolor sit ame tconsectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit ame tconsectetur adipisicing elit. Quisquam, quos.lorem ipsum dolor sit ame tconsectetur adipisicing elit. Quisquam, quos.lorem ipsum dolor sit ame tconsectetur adipisicing elit. Quisquam, quos.lorem ipsum dolor sit ame tconsectetur adipisicing elit. Quisquam, quos.lorem ipsum dolor sit ame tconsectetur adipisicing elit. Quisquam, quos.lorem ipsum dolor sit ame tconsectetur adipisicing elit. Quisquam, quos.
+
+lorem ipsum dolor sit ame tconsectetur adipisicing elit. Quisquam, quos. lorem ipsum dolor sit ame tconsectetur adipisicing elit. Quisquam, quos.lorem ipsum dolor sit ame tconsectetur adipisicing elit. Quisquam, quos.lorem ipsum dolor sit ame tconsectetur adipisicing elit. Quisquam, quos.lorem ipsum dolor sit ame tconsectetur adipisicing elit. Quisquam, quos.lorem ipsum dolor sit ame tconsectetur adipisicing elit. Quisquam, quos.lorem ipsum dolor sit ame tconsectetur adipisicing elit. Quisquam, quos.
+
+`code`
+
+```ts
+"use server";
+
+import { createId } from "@paralleldrive/cuid2";
+import { message } from "@/server/db/schema";
+import { revalidatePath } from "next/cache";
+import { db } from "@/server/db";
+
+export async function saveEntry(formData: FormData) {
+  const email = formData.get("email")?.toString() || "";
+  const name = formData.get("name")?.toString() || "";
+  const entry = formData.get("entry")?.toString() || "";
+  const id = createId();
+
+  await db.insert(message).values({
+    authorName: name as string,
+    authorEmail: email,
+    id: id,
+    text: entry,
+  });
+
+  revalidatePath("/guestbook");
+}
+```
+
+**bold** *italic* ~~strikethrough~~
+
+# Heading 1
+
+## Heading 2
+
+### Heading 3
+
+#### Heading 4
+
+![alt text](https://picsum.photos/seed/picsum/200/300 "Random Image")
+
+[Link to Google](https://google.com)
+
+> Blockquote
+
+| Syntax | Description |
+| ----------- | ----------- |
+| Header | Title |
+| Paragraph | Text |
+
+- [x] Write the press release
+
+this is a caption
+
+

@@ -1,113 +1,71 @@
-import Image from 'next/image'
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable react/no-unescaped-entities */
+
+import FM from "@/components/fm";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
+    <div className="flex flex-col gap-12 w-full h-full">
+      <section className="w-full flex flex-col justify-start p-[0.4rem]">
+        <h2>Prologue ~</h2>
+        <p>
+          20 y/o semicolon dev trying to build better web interfaces. taught by
+          the web itself, I love php but I write typescript, I love mern stack
+          but I use the <a>t3-stack</a> ~ cus <a>theo</a> said{" "}
+          <mark>typesaftey isn't optional</mark> apparently & btw I don't use
+          neovim.
         </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+        <p>
+          I'm a student, a fullstack dev, oss fanboy, techical writer, shitpost
+          creator, hackathon grinder, and somewhat of a gamer as well. I can
+          write ts, python, rust, go, ruby and I'm currently being forced to
+          learn c & cpp for my uni courses.
+        </p>
+        <p className="mb-0">
+          I like minimalism and simplicity and I try to reflect that in my works
+          as well. I often jam to music while working usually to genres like
+          pop, synth, glitchcore, hyperpop, rock, and jpop. Meaningful and deep
+          lyrics is what I look for in songs. My all time fav artist is{" "}
+          <a>EDEN</a>. According to <a>last.fm</a>, I have listened to his songs
+          a total of <mark>4066</mark> times. I also like reading books, mostly
+          fiction. Currently reading <a>The wind up bird chronicle</a> by{" "}
+          <a>Haruki Murakami</a>. Apart from this I also like playing FPS games
+          like <a>VALORANT</a> and just sitting by myself on the terrace and
+          looking at the night sky.
+        </p>
+      </section>
+      {/* <p className="divider italic">{"/ / / / / / / /"}</p> */}
+      <FM />
+      {/* <p className="divider italic">{"/ / / / / / / /"}</p> */}
+      <section className="w-full flex flex-col justify-start p-[0.4rem]">
+        <h2>Find me here ~</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-y-6 gap-x-12">
+          <div>
+            <p className="mb-2 text-zinc-400 font-semibold">GitHub</p>
+            <a href="">@asrvd</a>
+          </div>
+          <div>
+            <p className="mb-2 text-zinc-400 font-semibold">Twitter</p>
+            <a href="">@_asheeshh</a>
+          </div>
+          <div>
+            <p className="mb-2 text-zinc-400 font-semibold">YouTube</p>
+            <a href="">@asrvd</a>
+          </div>
+          <div>
+            <p className="mb-2 text-zinc-400 font-semibold">Email</p>
+            <a href="">asheeshh@duck.com</a>
+          </div>
+          <div>
+            <p className="mb-2 text-zinc-400 font-semibold">Discord</p>
+            <a href="">asheeshh#4872</a>
+          </div>
+          <div>
+            <p className="mb-2 text-zinc-400 font-semibold">CV</p>
+            <a href="">read.cv/asrvd</a>
+          </div>
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+      </section>
+    </div>
+  );
 }

@@ -1,0 +1,107 @@
+---
+title: 'I made a full-stack and type-safe personal site using the t3-stack (Next.js)!'
+description: 'This is an example of using MDX'
+published: 2021-05-20
+---
+
+## Intro
+
+First of all, thanks a lot for 1000+ followers on Dev.to, I really can’t believe we’ve come this far. I hadn’t even thought that I would make it this far. Thank you so much to all my followers and everyone who reads my content, love you all!
+
+A portfolio site or a personal site is something that you have to build at some point for sure if you’re a web developer and every developer has their own unique way of doing it using unique frameworks. But when it comes to portfolio sites, most of them are just frontend focused with little or no backend but that was not the case for me. 
+
+Next.js is always my first choice for building web apps but I wanted a type-safe and full-stack solution for my site, so I decided to use the [t3-stack](https://create.t3.gg/)! I’m a big fan of [create-t3-app](https://github.com/t3-oss/create-t3-app) and I’m also a maintainer for it’s repo. This blog is not a tutorial but more like a walkthrough and breakthrough of my personal site. 
+
+## The Initial Idea
+
+The initial idea I had in my mind was a very minimal site with a minimal navbar that would look more like a sidebar, and the design would be somewhat inspired by [leerob’s site](https://leerob.io/). Apart from this, I also wanted my site to display some cool dynamic and real-time data like my Spotify data, my blog posts fetched from [dev.to](http://dev.to) and a guestbook where people could leave messages for me!
+
+> NOTE: In case you don’t want to read till end, you can visit the site [here](https://asrvd.me) and view the source code [here](https://github.com/asrvd/asrvd.me). Don’t forget to give a star to the project if you liked it!
+> 
+
+## The Stack
+
+As I already said, I used the t3-stack for my site which is basically made up of -
+
+- Next.js as a framework
+- Tailwind CSS for styling
+- Prisma as ORM
+- tRPC for type-safe APIs
+- NextAuth.js for authentication
+
+And you’ll be surprised to know that I have used all of these pieces of amazing tech in my personal site! 
+
+## The Home Page
+
+The first thing that I always work on while building a web app is making it’s index or home page. I already mentioned above what I wanted my Nav Bar to look like and that my design was inspired by leerob.io. Now, it was time to implement it. After spending a lot of hours breaking and building things using Tailwind CSS, I finally made this index page which I love a lot - 
+
+
+The Home Page looks a bit different on mobile version -
+
+
+## The Static Pages
+
+Now the next things I wanted to build were the static pages like `/about`, `/now`, and `/links`. The first one sounds pretty clear that it’s the About Me page. `/now` has info about what I’m doing these days and `/links` has all my links listed in one single page. 
+
+The first two ages are very heavy on content so I decided to use markdown and [tailwind’s typography plugin](https://tailwindcss.com/docs/typography-plugin) for styling. I also used [showdown](https://github.com/showdownjs/showdown) to fetch the markdown and turn it into HTML. The code for the above can be found on the [site’s GitHub repository](https://github.com/asrvd/asrvd.me).
+
+The links page is generated using the `map()` function from an object containing info about all the links which looks something like this -
+
+```tsx
+export type Link = {
+  name: string;
+  url: string;
+  value: string;
+  icon: IconType;
+};
+export type Links = Link[];
+
+export const links: Links = [
+  {
+    name: "Discord",
+    url: "https://discord.com/users/784363251940458516",
+    value: "asheeshh#4872",
+    icon: SiDiscord,
+  },
+  {
+    name: "GitHub",
+    url: "https://github.com/asrvd",
+    value: "@asrvd",
+    icon: SiGithub,
+  },
+	...
+]
+```
+
+Notice how everything is type-safe, that’s one of the best practices for web developers. Type Safety shouldn’t be optional. IconType is imported from the react-icons library.
+
+## The Spotify Stats Page
+
+Here starts the good part, the Spotify stats page is made using fetching my Spotify data like - Currently Playing Song, Top Artists, and Top Tracks which are fetched from [last.fm](http://last.fm) API. I have used SWR for data fetching which makes building type safe data fetching very easy.
+
+I have 3 different API routes for each of them which filter out the response so that I only get what I’m using which also helps making it type-safe easier. The page updates in real time. Here is what the page looks like - 
+
+
+## The GuestBook
+
+This is my favorite part of my personal site and I really like the concept. The idea was taken from [leerob’s guestbook](https://leerob.io/guestbook). I wanted to build something similar where people can leave messages on the site for me and others.
+
+This is where backend stuff comes in like database, tRPC, authentication, and Prisma. I used [Planetscale’s free tier](https://planetscale.com) for my database. The whole backend is built using tRPC and Prisma, both of which take care of type-safety and have absolutely amazing DX.
+
+Basically, whenever someone visits the guestbook page, they can see all the previously posted messages but they can’t post a message till they are signed in. NextAuth.js makes it very easy to implement auth in Next.js. Once you’re signed in you can send a text message of maximum 100 words which is validates using [Zod](https://zod.dev/).
+
+Head over to the guestbook to send your own message [here](https://asrvd.me/guestbook). Here is what the page looks like - 
+
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/my0lsitti4dadc42gnp5.png)
+
+## Cmd+K Interface
+
+I also added a Cmd+K interface to my site to make mouse-less navigation easier. It’s made using [kbar](https://kbar.vercel.app/) and styles using Tailwind CSS. Here is what it looks like -
+
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ms4xlfrj5r51o7ztxly4.png)
+
+## Conclusion
+
+Overall, I really like how the site finally looks and I’m planning to add more pages and cool features to the site too! In case you’re looking for the site it’s deployed using Vercel @ [asrvd.me](https://asrvd.me/), and the source code is available on the [GitHub Repo](https://github.com/asrvd/asrvd.me).
+
+Thanks for reading, see you in the next blog!
