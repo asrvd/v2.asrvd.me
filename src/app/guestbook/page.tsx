@@ -6,7 +6,7 @@ import GuestbookForm from "./form";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
 
-export const guestbook = cache(async () => {
+const guestbook = cache(async () => {
   const entries = await db.query.message.findMany({
     orderBy: [desc(message.createdAt)],
   });
