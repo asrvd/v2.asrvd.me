@@ -1,4 +1,4 @@
-@import url("https://api.fontshare.com/v2/css?f[]=satoshi@1,900,700,500,300,400&display=swap");
+@import url("https://api.fontshare.com/v2/css?f[]=jet-brains-mono@300,200,500&f[]=outfit@400,800,300,500,600,200,100,700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -19,7 +19,7 @@ h2 {
 }
 
 p {
-  @apply text-zinc-100 text-[0.97rem] leading-relaxed tracking-normal mb-4 font-[350];
+  @apply text-zinc-100 text-[0.97rem] leading-relaxed tracking-normal mb-4 font-[300];
 }
 
 footer p {
@@ -57,7 +57,16 @@ article ul > li {
 }
 
 article pre {
-  @apply rounded-lg !important;
+  @apply rounded-lg font-normal !important;
+}
+
+article code::before,
+article code::after {
+  @apply content-none !important;
+}
+
+article p > code {
+  @apply font-normal bg-stone-800/50 rounded-md p-1 !important;
 }
 
 article h1,
@@ -67,7 +76,9 @@ article h4 {
   @apply text-zinc-50 font-semibold text-lg tracking-tight mb-4 leading-none !important;
 }
 
-article h2, h3, h4 {
+article h2,
+h3,
+h4 {
   @apply mt-8 !important;
 }
 

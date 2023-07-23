@@ -67,7 +67,7 @@ export default function FM() {
           </p>
           <p className="mb-0 leading-none">
             <a
-              href={data?.url}
+              href={data?.url || "#"}
               target="_blank"
               rel="norefferer"
               className="no-underline"

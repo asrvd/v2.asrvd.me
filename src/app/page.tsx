@@ -42,27 +42,27 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-y-6 gap-x-12">
           <div>
             <p className="mb-2 text-zinc-400 font-semibold">GitHub</p>
-            <a href="">@asrvd</a>
+            <a href="https://github.com/asrvd">@asrvd</a>
           </div>
           <div>
             <p className="mb-2 text-zinc-400 font-semibold">Twitter</p>
-            <a href="">@_asheeshh</a>
+            <a href="https://twitter.com/_asheeshh">@_asheeshh</a>
           </div>
           <div>
             <p className="mb-2 text-zinc-400 font-semibold">YouTube</p>
-            <a href="">@asrvd</a>
+            <a href="https://youtube.com/@asrvd">@asrvd</a>
           </div>
           <div>
             <p className="mb-2 text-zinc-400 font-semibold">Email</p>
-            <a href="">asheeshh@duck.com</a>
+            <a href="mailto:asheeshh@duck.com">asheeshh@duck.com</a>
           </div>
           <div>
             <p className="mb-2 text-zinc-400 font-semibold">Discord</p>
-            <a href="">asheeshh#4872</a>
+            <a href="https://discord.com/users/784363251940458516">asheeshh#4872</a>
           </div>
           <div>
             <p className="mb-2 text-zinc-400 font-semibold">CV</p>
-            <a href="">read.cv/asrvd</a>
+            <a href="https://read.cv/asrvd">read.cv/asrvd</a>
           </div>
         </div>
       </section>

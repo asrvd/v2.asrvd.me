@@ -13,7 +13,8 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       fontFamily: {
-        sans: ["Satoshi", "sans-serif"],
+        mono: ["JetBrains Mono", "monospace"],
+        sans: ["Outfit", "sans-serif"],
       },
       typography: ({ theme }) => ({
         DEFAULT: {
