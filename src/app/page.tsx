@@ -30,7 +30,7 @@ export default function Home() {
           a total of <mark>4066</mark> times. I also like reading books, mostly
           fiction. Currently reading <a>The wind up bird chronicle</a> by{" "}
           <a>Haruki Murakami</a>. Apart from this I also like playing FPS games
-          like <a>VALORANT</a> and just sitting by myself on the terrace and
+          like <a>VALORANT</a>, lifting <mark>weights</mark>, and just sitting by myself on the terrace and
           looking at the night sky.
         </p>
       </section>
