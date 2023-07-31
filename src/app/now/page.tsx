@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 export default function NowPage() {
   return (
     <div className="flex flex-col gap-12 w-full h-full">
