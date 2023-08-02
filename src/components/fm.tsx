@@ -19,7 +19,7 @@ type Song = {
 
 export default function FM() {
   const { data, error } = useSWR<Song>("/api/fm", fetcher, {
-    refreshInterval: 30000,
+    refreshInterval: 10000,
   });
 
   if (error) {

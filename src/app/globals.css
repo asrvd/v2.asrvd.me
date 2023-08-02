@@ -41,48 +41,48 @@ a:hover {
   text-decoration-color: #f4f4f5;
 }
 
-article a {
+article > a {
   @apply underline underline-offset-2 cursor-pointer duration-150 text-zinc-100 !important;
 
   text-decoration-color: #71717a !important;
   text-decoration-thickness: 1px !important;
 }
 
-article a:hover {
+article > a:hover {
   text-decoration-color: #f4f4f5 !important;
 }
 
-article ul > li {
+article > ul > li {
   @apply text-zinc-100 text-[0.97rem] font-normal !important;
 }
 
-article pre {
+article > pre {
   @apply rounded-lg font-normal !important;
 }
 
-article code::before,
-article code::after {
+article > code::before,
+article > code::after {
   @apply content-none !important;
 }
 
-article p > code {
+article > p > code {
   @apply font-normal bg-stone-800/50 rounded-md p-1 !important;
 }
 
-article h1,
-article h2,
-article h3,
-article h4 {
+article > h1,
+article > h2,
+article > h3,
+article > h4 {
   @apply text-zinc-50 font-semibold text-lg tracking-tight mb-4 leading-none !important;
 }
 
-article h2,
-h3,
-h4 {
+article > h2,
+article >h3,
+article >h4 {
   @apply mt-8 !important;
 }
 
-article img {
+article > img {
   @apply w-full rounded-lg !important;
 }
 

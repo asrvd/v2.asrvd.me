@@ -18,7 +18,7 @@ export default function Home() {
         <p>
           I'm a student, a fullstack dev, oss fanboy, techical writer, shitpost
           creator, hackathon grinder, and somewhat of a gamer as well. I can
-          write ts, python, rust, go, ruby and I'm currently being forced to
+          write typesript, python, rust, go, ruby and I'm currently being forced to
           learn c & cpp for my uni courses.
         </p>
         <p className="mb-0">

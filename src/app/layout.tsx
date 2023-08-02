@@ -28,7 +28,7 @@ export default function RootLayout({
             <div className="flex flex-col gap-2 justify-center">
               <h2 className="mb-0">Ashish</h2>
               <p className="mb-0 text-zinc-400 font-semibold leading-none">
-                IDK what to put here tbh :/
+                Student • Dev • Ailurophile
               </p>
             </div>
           </section>
