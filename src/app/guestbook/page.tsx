@@ -1,5 +1,7 @@
+"use server";
+
 import { db } from "@/server/db";
-import { Message, message } from "@/server/db/schema";
+import { Message, messages } from "@/server/db/schema";
 import { desc } from "drizzle-orm";
 import { cache } from "react";
 import GuestbookForm from "./form";
@@ -7,8 +9,8 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
 
 const guestbook = cache(async () => {
-  const entries = await db.query.message.findMany({
-    orderBy: [desc(message.createdAt)],
+  const entries = await db.query.messages.findMany({
+    orderBy: [desc(messages.createdAt)],
   });
   return entries;
 });
@@ -34,7 +36,7 @@ export default async function GuestbookPage() {
                   year: "numeric",
                   month: "short",
                   day: "numeric",
-                }).format(new Date(entry.createdAt))}
+                }).format(new Date(entry.createdAt ?? ""))}
               </span>
             </p>
           </div>

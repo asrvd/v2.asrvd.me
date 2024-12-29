@@ -1,11 +1,16 @@
 import "dotenv/config";
-import type { Config } from "drizzle-kit";
-import { env } from "@/env.mjs";
+import { defineConfig } from "drizzle-kit";
 
-const config: Config = {
+if (!process.env.DB_URL || !process.env.DB_TOKEN) {
+  throw new Error("DB_URL and DB_TOKEN must be set");
+}
+
+export default defineConfig({
   schema: "./src/server/db/schema.ts",
   out: "./drizzle",
-  connectionString: env.DB_URL,
-};
-
-export default config;
+  dialect: "turso",
+  dbCredentials: {
+    url: process.env.DB_URL,
+    authToken: process.env.DB_TOKEN,
+  },
+});

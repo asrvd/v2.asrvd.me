@@ -34,11 +34,11 @@ export default function GuestbookForm({
             aria-label="Enter your message"
             placeholder="Enter your message"
             disabled={pending}
-            className="rounded-lg bg-stone-800/80 h-[150px] text-base focus:ring-1 placeholder:text-zinc-500 ring-stone-600 outline-none p-3"
+            className="rounded-lg bg-stone-800/80 h-[150px] text-base focus:ring-1 placeholder:text-zinc-500 ring-stone-600/30 border border-stone-700/30 outline-none p-3"
           ></textarea>
-          <div className="flex gap-2">
+          <div className="flex gap-2 w-full">
             <button
-              className="px-4 py-2 rounded-md bg-stone-800/80 max-w-max text-sm lg:text-base relative no-underline duration-300 ease-in focus:ring-1 ring-stone-600 hover:bg-stone-800"
+              className="px-4 py-2 rounded-md bg-stone-800/80 max-w-max text-sm lg:text-base relative no-underline duration-300 ease-in focus:ring-1 ring-stone-600/30 hover:bg-stone-700/50 border border-stone-700/30 w-full"
               type="submit"
               disabled={pending}
             >
@@ -48,8 +48,8 @@ export default function GuestbookForm({
           </div>
         </form>
       ) : (
-        <div className="w-full h-full flex flex-col justify-between">
-          <p>Sign in to leave a message here</p>
+        <div className="w-full h-full flex justify-between items-center">
+          <p className="w-full m-0">Sign in to leave a message here</p>
           <SignInButton />
         </div>
       )}

@@ -27,7 +27,7 @@ export default function RootLayout({
             </div>
             <div className="flex flex-col gap-2 justify-center">
               <h2 className="mb-0">Ashish</h2>
-              <p className="mb-0 text-zinc-400 font-semibold leading-none">
+              <p className="mb-0 text-zinc-400 font-normal leading-none">
                 Student • Dev • Ailurophile
               </p>
             </div>

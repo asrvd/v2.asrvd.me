@@ -4,7 +4,7 @@ const { withContentlayer } = require("next-contentlayer");
 const nextConfig = {
   experimental: {
     serverActions: true,
-    mdxRs: true
+    serverComponentsExternalPackages: ["@libsql/client"],
   },
 };
 

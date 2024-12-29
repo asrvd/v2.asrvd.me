@@ -18,7 +18,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
   }
 
   return (
-    <section className="p-[0.4rem]">
+    <section className="p-[0.4rem] w-full">
       <div className="mb-8">
         <h1 className="text-zinc-50 font-semibold text-lg tracking-tight">
           {post.title}
@@ -31,7 +31,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
           }).format(new Date(post.published))}
         </time>
       </div>
-      <article className="prose prose-pre:bg-stone-800/50 prose-blockquote:border-l">
+      <article className="prose prose-2xl prose-pre:bg-stone-800/50 prose-blockquote:border-l w-full">
         <MDX code={post.body.code} />
       </article>
     </section>

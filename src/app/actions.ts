@@ -1,7 +1,7 @@
 "use server";
 
 import { createId } from "@paralleldrive/cuid2";
-import { message } from "@/server/db/schema";
+import { messages } from "@/server/db/schema";
 import { revalidatePath } from "next/cache";
 import { db } from "@/server/db";
 
@@ -11,7 +11,7 @@ export async function saveEntry(formData: FormData) {
   const entry = formData.get("entry")?.toString() || "";
   const id = createId();
 
-  await db.insert(message).values({
+  await db.insert(messages).values({
     authorName: name as string,
     authorEmail: email,
     id: id,

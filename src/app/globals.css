@@ -1,4 +1,4 @@
-@import url("https://api.fontshare.com/v2/css?f[]=jet-brains-mono@300,200,500&f[]=outfit@400,800,300,500,600,200,100,700&display=swap");
+@import url("https://api.fontshare.com/v2/css?f[]=jet-brains-mono@300,200,500&f[]=cabinet-grotesk@400,800,300,500,600,200,100,700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -15,7 +15,7 @@ body {
 }
 
 h2 {
-  @apply text-zinc-50 font-semibold text-lg tracking-tight mb-4 leading-none;
+  @apply text-zinc-50 font-normal text-lg tracking-tight mb-4 leading-none;
 }
 
 p {
@@ -73,7 +73,7 @@ article > h1,
 article > h2,
 article > h3,
 article > h4 {
-  @apply text-zinc-50 font-semibold text-lg tracking-tight mb-4 leading-none !important;
+  @apply text-zinc-50 font-normal text-lg tracking-tight mb-4 leading-none !important;
 }
 
 article > h2,
@@ -88,6 +88,14 @@ article > img {
 
 mark {
   @apply text-orange-200/90 bg-transparent;
+}
+
+article > p > img {
+  @apply w-full rounded-lg border border-stone-700/30 !important;
+}
+
+article > pre {
+  @apply border border-stone-700/30 text-base font-light !important;
 }
 
 .token.comment,
